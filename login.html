@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form>
+        <h2>Log In</h2>
+        <div class="inputBox">
+            <input type="text" required>
+            <label>Username</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+        <div class="inputBox">
+            <input type="submit" value="Log In">
+        </div>
+        <p>Don't have an account?
+            <a href="Create account.html">Create Account</a>
+        </p>
+        <p>
+            <a href="index.html">&#8592; Back to Phone Store</a>
+        </p>
+    </form>
+<script>
+        let labels = document.querySelectorAll('label');
+        labels.forEach(label => {
+            label.innerHTML = label.innerText.split('').map((letter, i) => {
+                return `<span style="transition-delay: ${i * 50}ms">${letter}</span>`;
+            }).join('');
+        });
+</script>
+</body>
+</html>
